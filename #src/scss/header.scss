@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    &-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__logo {}
+        &__second-block {
+            & * {
+                padding: 10px;
+            }
+            display: flex;
+        }
+    }
+
+
+    &-navigation {
+        background: #25529F;
+        &__list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__item {
+            color: #F9F9F9;
+        }
+    }
+}
