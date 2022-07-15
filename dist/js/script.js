@@ -21,7 +21,18 @@
 
 window.addEventListener('DOMContentLoaded', function () {
     //////////////функция вывода размеров   console.log(salePrice[i].getBoundingClientRect().width);
+/////автоматический маргин-топ для main//////////////
+window.addEventListener("resize", ()=> {
+    document.querySelector('main').style.marginTop = document.querySelector('header').getBoundingClientRect().height + 20 + 'px';
+});
+    
 
+    //////кнопка меню бургера//////////////
+    document.querySelector('.open-close-menu-button__item').addEventListener("click", () => {
+        document.querySelector('.open-close-menu-button__item').classList.toggle('active');
+        document.querySelector('.header-navigation').classList.toggle('active');
+        document.querySelector('body').classList.toggle('active');
+    });
 });
 
 
