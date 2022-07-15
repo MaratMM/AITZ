@@ -28,6 +28,9 @@ html, body {
     margin: 0 auto;
     padding: 0 10px;
 }
+.fixed {
+    position: fixed;
+}
 
 //переменные
 $mobile-media-size: 425px;
