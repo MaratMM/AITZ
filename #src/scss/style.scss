@@ -31,6 +31,12 @@ html, body {
 .fixed {
     position: fixed;
 }
+.relative {
+    position: relative;
+}
+.flex {
+    display: flex;
+}
 
 //переменные
 $mobile-media-size: 425px;

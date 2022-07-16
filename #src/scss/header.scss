@@ -1,6 +1,7 @@
 body.active {
     overflow: hidden;
 }
+
 .header {
     position: fixed;
     top: 0;
@@ -8,6 +9,95 @@ body.active {
     background-color: #ffffff;
 
     &-main {
+        @media (max-width: 375px) {
+            background: #ECF3FF;
+        }
+
+        &__language {
+            font-weight: 700;
+            display: flex;
+            font-size: 24px;
+            line-height: 140%;
+            letter-spacing: -0.01em;
+            margin-right: 10px;
+
+            &-item {
+                &:hover {
+                    color: rgb(5, 230, 5);
+                    transition: all 0.3s ease 0s;
+                }
+
+                cursor: pointer;
+                color: #ECF3FF;
+                padding: 5px;
+                transition: all 0.3s ease 0s;
+
+                &.active {
+                    color: #25529F;
+
+                    &:hover {
+                        color: rgb(5, 230, 5);
+                        transition: all 0.3s ease 0s;
+                    }
+                }
+            }
+
+        }
+
+
+        &__input-search {
+            height: 26px;
+            width: 100%;
+            opacity: 0.0001;
+            border-radius: 31px;
+            border: 1px solid rgba(37, 82, 159, 1);
+            transition: all 1s ease 0s;
+
+            &.active {
+                height: 26px;
+                opacity: 1;
+                border-radius: 31px;
+                border: 1px solid rgba(37, 82, 159, 1);
+                transition: all 1s ease 0s;
+            }
+
+            &:focus {
+                outline: none;
+                border: 1px solid rgba(37, 82, 159, 1);
+            }
+        }
+
+        &__icon {
+            cursor: pointer;
+            width: 26px;
+            height: 26px;
+            margin: 5px;
+            background-repeat: no-repeat;
+
+            &_search {
+                background-image: url('./../img/Search.png');
+                transition: all 1s ease 0s;
+                position: absolute;
+                right: -4px;
+
+                &.active {
+                    width: 12px;
+                    height: 12px;
+                    right: 2px;
+                    // opacity: 0.2;
+                    background-image: url('./../img/Search-loop.png');
+                    transition: all 1s ease 0s;
+                }
+            }
+
+            &_authorization {
+                background-image: url('./../img/LK.png');
+                // z-index: 2;
+            }
+        }
+
+
+
         .open-close-menu-button {
             display: none;
             width: 25px;
@@ -89,12 +179,23 @@ body.active {
             @media (max-width: 375px) {
                 display: none;
             }
-            & * {
-                padding: 10px;
-            }
 
             display: flex;
+            flex-wrap: wrap;
+            align-items: center;
             margin-left: 40px;
+
+            .popravka-input {
+                width: 30px;
+                transition: all 1s ease 0s;
+                position: relative;
+                display: flex;
+                align-items: center;
+                &.active {
+                    width: 100px;
+                    transition: all 1s ease 0s;
+                }
+            }
         }
     }
 
@@ -118,11 +219,22 @@ body.active {
         min-height: 50px;
 
         &__list {
+            position: relative;
             list-style: none;
             padding: 10px 10px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            &_submenu {
+                flex-direction: column;
+                position: absolute;
+                background-color: red;
+                display: none;
+                z-index: 2;
+                &:hover {
+                    display: flex;
+                }
+            }
 
             @media (max-width: 375px) {
                 display: flex;
@@ -133,7 +245,38 @@ body.active {
 
         &__item {
             color: #F9F9F9;
-            margin: 10px 10px;
+            position: relative;
+            display: inline-block;
+            margin: 5px 5px;
+            text-decoration: none;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                width: 0%;
+                height: 2px;
+                background-color: #ffffff;
+                transition: all 0.2s ease 0s;
+            }
+            &:hover {
+                &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #ffffff;
+                transition: all 0.2s ease 0s;
+            }
+            }
+            
         }
     }
+}
+
+.header-navigation__item:hover + .header-navigation__list_submenu, 
+.header-navigation__item:active + .header-navigation__list_submenu {
+    display: flex;
 }
