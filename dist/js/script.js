@@ -23,8 +23,6 @@ window.addEventListener('DOMContentLoaded', function () {
     //////////////функция вывода размеров   console.log(salePrice[i].getBoundingClientRect().width);
     /////автоматический маргин-топ для main и скролл для наверх для правильного отображения//////////////
     const marginTop = () => {
-
-
         document.querySelector('main').style.marginTop = document.querySelector('header').getBoundingClientRect().height + 10 + 'px';
     }
     marginTop();
@@ -37,9 +35,7 @@ window.addEventListener('DOMContentLoaded', function () {
     this.document.querySelector('.button-close-message-info')?.addEventListener('click', () => {
         document.querySelector('.message-info').style.display = 'none';
         marginTop();
-        
     })
-
 
     //////кнопка меню бургера//////////////
     document.querySelector('.open-close-menu-button__item')?.addEventListener("click", () => {
@@ -59,13 +55,13 @@ window.addEventListener('DOMContentLoaded', function () {
         })
     }
 
-    ////////////////////////////////////
+    ////////////////для красивого появления поиска////////////////////
     this.document.querySelector('.header-main__icon_search')?.addEventListener('click', () => {
         this.document.querySelector('.header-main__icon_search').classList.toggle('active');
         this.document.querySelector('.header-main__input-search').classList.toggle('active');
         this.document.querySelector('.popravka-input').classList.toggle('active');
     })
-
+    
 });
 
 

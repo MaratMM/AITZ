@@ -17,40 +17,26 @@
 
 <body>
 
-    
-    <form class="popup-registration" action=""></form>
-
     @@include('_header.html')
 
-
     <main>
-        <div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus minus eum unde, omnis veritatis aperiam
-            ipsa distinctio earum voluptatibus voluptas labore sunt inventore assumenda tempore non, sit asperiores eos
-            iste.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus minus eum unde, omnis veritatis
-            aperiam ipsa distinctio earum voluptatibus voluptas labore sunt inventore assumenda tempore non, sit
-            asperiores eos iste.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus minus eum unde,
-            omnis veritatis aperiam ipsa distinctio earum voluptatibus voluptas labore sunt inventore assumenda tempore
-            non, sit asperiores eos iste.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus minus eum
-            unde, omnis veritatis aperiam ipsa distinctio earum voluptatibus voluptas labore sunt inventore assumenda
-            tempore non, sit asperiores eos iste.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
-            minus eum unde, omnis veritatis aperiam ipsa distinctio earum voluptatibus voluptas labore sunt inventore
-            assumenda tempore non, sit asperiores eos iste.Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Doloribus minus eum unde, omnis veritatis aperiam ipsa distinctio earum voluptatibus voluptas labore sunt
-            inventore assumenda tempore non, sit asperiores eos iste.Lorem ipsum dolor, sit amet consectetur adipisicing
-            elit. Doloribus minus eum unde, omnis veritatis aperiam ipsa distinctio earum voluptatibus voluptas labore
-            sunt inventore assumenda tempore non, sit asperiores eos iste.Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit. Doloribus minus eum unde, omnis veritatis aperiam ipsa distinctio earum voluptatibus
-            voluptas labore sunt inventore assumenda tempore non, sit asperiores eos iste.Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Doloribus minus eum unde, omnis veritatis aperiam ipsa distinctio earum
-            voluptatibus voluptas labore sunt inventore assumenda tempore non, sit asperiores eos iste.Lorem ipsum
-            dolor, sit amet consectetur adipisicing elit. Doloribus minus eum unde, omnis veritatis aperiam ipsa
-            distinctio earum voluptatibus voluptas labore sunt inventore assumenda tempore non, sit asperiores eos
-            iste.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus minus eum unde, omnis veritatis
-            aperiam ipsa distinctio earum voluptatibus voluptas labore sunt inventore assumenda tempore non, sit
-            asperiores eos iste.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus minus eum unde,
-            omnis veritatis aperiam ipsa distinctio earum voluptatibus voluptas labore sunt inventore assumenda tempore
-            non, sit asperiores eos iste.
+        <div class="popup-authorization">
+            <h2>Добро пожаловать!</h2>
+            <form class="popup-authorization__form" action="">
+                <div class="popup-authorization__email">
+                    <label class="email-input-authorization" for="email-input-authorization">Адрес электронной
+                        почты</label>
+                    <input id="email-input-authorization" type="email" placeholder="woodi94@mail.ru">
+                </div>
+                <div class="popup-authorization__password">
+                    <label for="password-input-authorization">Неверный пароль </label>
+                    <input id="password-input-authorization" type="password">
+                </div>
+
+                <input id="popup-authorization-button" type="button" value="Войти">
+            </form>
+            <p> <a href="#">Регистрация</a> для новых Членов Ассоциации</p>
+            <div class="close-popup-authorization"></div>
         </div>
     </main>
 
