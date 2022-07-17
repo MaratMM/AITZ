@@ -49,7 +49,7 @@ body.active {
 
 .header {
   position: fixed;
-  top: 0;
+  top: 0px;
   width: 100%;
   background-color: #ffffff;
 }
@@ -380,6 +380,49 @@ body.active {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.message-info {
+  background-color: rgba(255, 107, 0, 0.15);
+  color: #d45c05;
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  line-height: 140%;
+}
+
+.message-info .button-close-message-info {
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.message-info p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.message-info p a {
+  color: #d45c05;
 }
 
 @media (max-width: 475px) {
