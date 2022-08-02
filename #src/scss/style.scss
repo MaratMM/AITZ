@@ -60,6 +60,7 @@ $mob-tabl-media-size: 760px;
 
 @import "header";
 @import "popup";
+@import "association";
 // @import "footer";
 // @import "main_page";
 // @import "catalog";
@@ -67,7 +68,7 @@ $mob-tabl-media-size: 760px;
 // @import "cart";
 // @import "thankyou";
 
-////////////////////////////////////////////////
+////////////////////////popup////////////////////////
 
 .message-info {
     background-color: rgb(255, 107, 0, 0.15);
@@ -100,3 +101,5 @@ $mob-tabl-media-size: 760px;
         }
     }
 }
+
+//////////////////////////////////////////////////

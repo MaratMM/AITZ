@@ -1,29 +1,56 @@
 //добавление других js  к общему файлу
 
-
 //необходимая часть , не удалять!!!!!!!!!!
-// function testWebP(callback) {
-//     var webP = new Image();
-//     webP.onload = webP.onerror = function () {
-//         callback(webP.height == 2);
-//     };
-//     webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-// }
-// testWebP(function (support) {
-//     if (support == true) {
-//         document.querySelector('body').classList.add('webp');
-//     } else {
-//         document.querySelector('body').classList.add('no-webp');
-//     }
-// });
+function testWebP(callback) {
+    var webP = new Image();
+    webP.onload = webP.onerror = function () {
+        callback(webP.height == 2);
+    };
+    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+}
+testWebP(function (support) {
+    if (support == true) {
+        document.querySelector('body').classList.add('webp');
+    } else {
+        document.querySelector('body').classList.add('no-webp');
+    }
+});
 
 //основной скрипт
 
 window.addEventListener('DOMContentLoaded', function () {
+if (this.document.querySelector('.swiper-association-slider')) {
+    const swiper = new Swiper('.swiper-association-slider', {
+  // Optional parameters
+  loop: true,
+  updateOnWindowResize: true,
+  // Responsive breakpoints
+  
+  slidesPerView: 1,
+  spaceBetween: 0,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+    // when window width is >= 640px
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 0
+    }
+  },
+  autoplay: {
+    delay: 3000,
+  }
+
+});;
+}
+    
     //////////////функция вывода размеров   console.log(salePrice[i].getBoundingClientRect().width);
     /////автоматический маргин-топ для main и скролл для наверх для правильного отображения//////////////
     const marginTop = () => {
-        document.querySelector('main').style.marginTop = document.querySelector('header').getBoundingClientRect().height + 10 + 'px';
+        document.querySelector('main').style.marginTop = document.querySelector('header').getBoundingClientRect().height + 0 + 'px';
     }
     marginTop();
     window.scrollTo({
