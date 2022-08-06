@@ -1,0 +1,156 @@
+footer {
+    background: #25529F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.footer-politic {
+    a {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: -0.01em;
+        text-decoration-line: underline;
+
+        color: #FFFFFF;
+
+        @media (max-width: 637px) {
+            display: none;
+        }
+
+    }
+}
+
+.footer-wrapper {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    @media (max-width: 637px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-block1,
+    .footer-fast-links,
+    .footer-contacts {
+        box-sizing: border-box;
+        margin: 0 10px 0 10px;
+    }
+
+    .footer-block1 {
+        border-right: 1px solid white;
+        position: relative;
+
+        @media (max-width: 637px) {
+            border-right: none;
+            margin-bottom: 60px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 50%;
+                height: 1px;
+                background-color: white;
+                left: 25%;
+                bottom: -30px;
+
+            }
+        }
+
+        padding-right: 10px;
+
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: -0.01em;
+
+            /* Light_Blue */
+
+            color: #ECF3FF;
+        }
+
+        h4 {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.01em;
+
+            /* Light_Blue */
+
+            color: #ECF3FF;
+        }
+    }
+
+    .footer-fast-links {
+        span {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: -0.01em;
+
+            /* Light_Blue */
+
+            color: #ECF3FF;
+        }
+
+        &__list {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            margin-left: -5px;
+
+            &__item {
+                list-style: none;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: -0.01em;
+
+                /* Light_Blue */
+
+                color: #ECF3FF;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .footer-contacts {
+        span {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: -0.01em;
+
+            /* Light_Blue */
+
+            color: #ECF3FF;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: -0.01em;
+
+            /* Light_Blue */
+
+            color: #ECF3FF;
+        }
+
+        p>a {
+            text-decoration-line: underline;
+
+            color: #FFFFFF;
+        }
+    }
+}
