@@ -675,6 +675,102 @@ body.active {
   height: 100px !important;
 }
 
+.green-button {
+  padding: 5px 15px;
+  background: #01BD3A;
+  border-radius: 18px;
+  border: none;
+}
+
+.green-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.index-block__all-news {
+  margin-left: 30px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  display: inline;
+  letter-spacing: -0.01em;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #25529F;
+  opacity: 0.25;
+}
+
+.index-block__caption {
+  display: inline;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #25529F;
+}
+
+.last-news img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.last-news__date {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #454655;
+}
+
+.last-news__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #454655;
+}
+
+.last-news__list {
+  list-style: none;
+}
+
+.last-news__name {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.01em;
+  color: #25529F;
+}
+
+.last-news__name_mini {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+}
+
+.last-news__name_mini > a {
+  text-decoration: none;
+  color: #25529F;
+}
+
 footer {
   background: #25529F;
   color: white;
@@ -843,6 +939,34 @@ footer {
 
 .message-info p a {
   color: #d45c05;
+}
+
+@media (max-width: 785px) {
+  .index-block__all-news {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #D30A44;
+    opacity: 1;
+  }
+
+  .last-news {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .last-news__list {
+    display: none;
+  }
 }
 
 @media (max-width: 775px) {

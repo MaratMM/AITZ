@@ -1,0 +1,215 @@
+.association {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.association-block__img {
+    img {
+        width: 100%;
+    }
+
+    height: 100%;
+}
+
+.association-block__text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.association-block__text h1 {
+    @media (max-width: 775px) {
+        font-size: 6vw;
+        display: inline-block;
+        width: 90vw;
+    }
+
+    width: 668px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    color: #25529f;
+    letter-spacing: -0.01em;
+}
+
+.association-block__text p {
+    @media (max-width: 775px) {
+        font-size: 5vw;
+        display: inline-block;
+        width: 90vw;
+    }
+
+    width: 500px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #25529f;
+}
+
+.association-block__button-zone {
+    @media (max-width: 477px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.association-block__button-zone button {
+    @media (max-width: 477px) {
+        margin-bottom: 10px;
+    }
+
+    border-radius: 4px;
+    width: 216px;
+    height: 42px;
+}
+
+.association-block__button-zone_red-button {
+    background: #D30A44;
+    color: white;
+    border: none;
+}
+
+.association-block__button-zone_transparent-button {
+    background-color: transparent;
+    border: solid 1px #25529f;
+    color: #25529f;
+}
+
+
+.association-slider {
+    background: #ECF3FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.association-slider h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #25529F;
+}
+
+.association-slider__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px !important;
+}
+
+.green-button {
+    padding: 5px 15px;
+    background: #01BD3A;
+    border-radius: 18px;
+    border: none;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+}
+
+.index-block {
+    &__all-news {
+        margin-left: 30px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        display: inline;
+        letter-spacing: -0.01em;
+        text-decoration-line: underline;
+        color: #25529F;
+        opacity: 0.25;
+
+        @media (max-width: 785px) {
+            order: 2;
+            margin-left: 0;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            color: #D30A44;
+            opacity: 1;
+        }
+    }
+
+    &__caption {
+        display: inline;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: #25529F;
+    }
+}
+
+.last-news {
+    @media (max-width: 785px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    &__date {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        color: #454655;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #454655;
+    }
+
+    &__list {
+        list-style: none;
+
+        @media (max-width: 785px) {
+            display: none;
+        }
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.01em;
+        color: #25529F;
+
+        &_mini {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
+            &>a {
+                text-decoration: none;
+                color: #25529F;
+            }
+        }
+    }
+}
