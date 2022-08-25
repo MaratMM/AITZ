@@ -19,6 +19,7 @@
 
 html,
 body {
+    overflow-x: hidden;
     height: 100%;
     font-family: "Rubik", Helvetica, sans-serif;
     font-style: normal;
@@ -62,6 +63,7 @@ $mob-tabl-media-size: 760px;
 @import "popup";
 @import "index-main";
 @import "footer";
+@import "input-form";
 // @import "main_page";
 // @import "catalog";
 // @import "productPage";

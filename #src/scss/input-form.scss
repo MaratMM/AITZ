@@ -1,0 +1,112 @@
+.personal-page {
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    background: #ecf3ff;
+    box-shadow: 0px 20px 20px -10px rgba(175, 194, 226, 0.25);
+    border-radius: 16px;
+    grid-template-areas:
+      'personal-page__navigation personal-page__inputs personal-page__inputs'
+      'personal-page__navigation personal-page__news personal-page__news'
+      'personal-page__navigation personal-page__news personal-page__news';
+  }
+  .wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .personal-page__navigation {
+    grid-area: personal-page__navigation;
+    overflow: hidden;
+    border: none;
+    background: #ffffff;
+    border-radius: 8px;
+    padding-top: 32px;
+    max-width: 260px;
+  }
+  .personal-page__navigation > option {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.01em;
+    color: #454655;
+    margin-bottom: 24px;
+    width: 100%;
+    padding: 11px 23px;
+  }
+  .personal-page__navigation > option:checked {
+    background: #ecf3ff;
+    position: relative;
+  }
+  .personal-page__navigation > option:checked::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: #4285f7;
+  }
+  .personal-page__navigation > option:nth-child(1) {
+    margin-bottom: 40px;
+  }
+  .personal-page__navigation > option:nth-child(1),
+  .personal-page__navigation > option:nth-child(2) {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    color: #454655;
+  }
+  .personal-page__navigation:focus {
+    outline: none;
+  }
+  .personal-page__inputs {
+    grid-area: personal-page__inputs;
+  }
+  .personal-page__news {
+    grid-area: personal-page__news;
+  }
+  
+  .personal-page__inputs input {
+    box-sizing: border-box;
+    background: #ffffff;
+    padding-left: 10px;
+    border: 1px solid #c2cee2;
+    border-radius: 4px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.01em;
+    color: #9899af;
+  }
+  .personal-page__inputs input:focus {
+    outline: 1px solid #4285f7;
+    border: none;
+    box-shadow: 0px 4px 8px -10px rgba(14, 99, 225, 0.15);
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.01em;
+    color: #4285f7;
+  }
+  .personal-page__inputs input[type='date'] {
+    width: 180px;
+  }
+  .personal-page__inputs input[type='search'] {
+    width: 260px;
+  }
+  label[for='personal-page__inputs-search'] {
+    position: relative;
+  }
+  label[for='personal-page__inputs-search']::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    right: 10px;
+    top: 5%;
+  }
+  
