@@ -19,10 +19,16 @@ testWebP(function (support) {
 //основной скрипт
 
 window.addEventListener('DOMContentLoaded', function () {
-if (this.document.querySelector('.swiper-association-slider')) {
-    @@include('swiper-association-slider.js');
-}
-    
+    /////////////подключение слайдера//////////////////////////
+    if (this.document.querySelector('.swiper-association-slider')) {
+        @@include('swiper-association-slider.js');
+    }
+
+    ///////////////////правильное офрмление выпадающего списка////////////////////
+    if (this.document.querySelector('.personal-page')) {
+        @@include('select-navigation.js');
+    }
+
     //////////////функция вывода размеров   console.log(salePrice[i].getBoundingClientRect().width);
     /////автоматический маргин-топ для main и скролл для наверх для правильного отображения//////////////
     const marginTop = () => {

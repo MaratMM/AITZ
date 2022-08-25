@@ -1101,24 +1101,35 @@ footer {
   grid-template-areas: "personal-page__navigation personal-page__inputs personal-page__inputs" "personal-page__navigation personal-page__news personal-page__news" "personal-page__navigation personal-page__news personal-page__news";
 }
 
+select.personal-page__navigation {
+  display: none;
+}
+
+div.personal-page__navigation {
+  display: initial;
+}
+
 .wrapper {
   max-width: 900px;
   margin: 0 auto;
 }
 
-.personal-page__navigation {
+div.personal-page__navigation {
   grid-area: personal-page__navigation;
   overflow: hidden;
   border: none;
   background: #ffffff;
   border-radius: 8px;
   padding-top: 32px;
-  max-width: 260px;
+  width: 240px;
 }
 
-.personal-page__navigation > option {
+div.personal-page__navigation > div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-weight: 400;
   font-size: 14px;
+  word-wrap: break-word;
   line-height: 17px;
   letter-spacing: -0.01em;
   color: #454655;
@@ -1127,12 +1138,12 @@ footer {
   padding: 11px 23px;
 }
 
-.personal-page__navigation > option:checked {
+div.personal-page__navigation > div.active {
   background: #ecf3ff;
   position: relative;
 }
 
-.personal-page__navigation > option:checked::after {
+div.personal-page__navigation > div.active::after {
   position: absolute;
   content: "";
   left: 0;
@@ -1142,21 +1153,17 @@ footer {
   background: #4285f7;
 }
 
-.personal-page__navigation > option:nth-child(1) {
+div.personal-page__navigation > div:nth-child(1) {
   margin-bottom: 40px;
 }
 
-.personal-page__navigation > option:nth-child(1),
-.personal-page__navigation > option:nth-child(2) {
+div.personal-page__navigation > div:nth-child(1),
+div.personal-page__navigation > div:nth-child(2) {
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: -0.01em;
   color: #454655;
-}
-
-.personal-page__navigation:focus {
-  outline: none;
 }
 
 .personal-page__inputs {
@@ -1394,6 +1401,26 @@ label[for=personal-page__inputs-search]::after {
 
   .more-information__cart div > p {
     text-align: start;
+  }
+}
+
+@media (max-width: 500px) {
+  .personal-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  select.personal-page__navigation {
+    display: initial;
+  }
+
+  div.personal-page__navigation {
+    display: none;
   }
 }
 

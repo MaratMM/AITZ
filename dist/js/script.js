@@ -19,8 +19,9 @@ testWebP(function (support) {
 //основной скрипт
 
 window.addEventListener('DOMContentLoaded', function () {
-if (this.document.querySelector('.swiper-association-slider')) {
-    const swiper = new Swiper('.swiper-association-slider', {
+    /////////////подключение слайдера//////////////////////////
+    if (this.document.querySelector('.swiper-association-slider')) {
+        const swiper = new Swiper('.swiper-association-slider', {
   // Optional parameters
   loop: true,
   updateOnWindowResize: true,
@@ -45,8 +46,38 @@ if (this.document.querySelector('.swiper-association-slider')) {
   }
 
 });;
+    }
+
+    ///////////////////правильное офрмление выпадающего списка////////////////////
+    if (this.document.querySelector('.personal-page')) {
+        let injection = (arg1, arg2) => {
+    return (`<${arg1} class="personal-page__navigation">
+    <${arg2}>Библиотека</${arg2}>
+    <${arg2}>Комитеты</${arg2}>
+    <${arg2}>Комитет по коммуникациям</${arg2}>
+    <${arg2}>Комитет по регуляторным вопросам</${arg2}>
+    <${arg2}>Комитет по политике в области ответственного отношения к здоровью</${arg2}>
+    <${arg2}>Комитет по этике</${arg2}>
+</${arg1}>`);
 }
-    
+
+if (screen.width>=500) {
+    document.querySelector('.personal-page').insertAdjacentHTML('afterbegin', injection("div", "div"));
+} else {
+    document.querySelector('.personal-page').insertAdjacentHTML('afterbegin', injection("select", "option"));
+};
+
+const selectOptions = document.querySelectorAll('.personal-page__navigation>div');
+selectOptions.forEach(selectOption => {
+    selectOption.addEventListener('click', () => {
+        selectOptions.forEach(selectOption => {
+            selectOption.classList.remove('active');
+        });
+        selectOption.classList.add('active');
+    })
+});;
+    }
+
     //////////////функция вывода размеров   console.log(salePrice[i].getBoundingClientRect().width);
     /////автоматический маргин-топ для main и скролл для наверх для правильного отображения//////////////
     const marginTop = () => {
