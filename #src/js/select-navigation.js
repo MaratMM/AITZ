@@ -8,19 +8,28 @@ let injection = (arg1, arg2) => {
     <${arg2}>Комитет по этике</${arg2}>
 </${arg1}>`);
 }
-
-if (screen.width>=500) {
-    document.querySelector('.personal-page').insertAdjacentHTML('afterbegin', injection("div", "div"));
-} else {
-    document.querySelector('.personal-page').insertAdjacentHTML('afterbegin', injection("select", "option"));
-};
-
-const selectOptions = document.querySelectorAll('.personal-page__navigation>div');
-selectOptions.forEach(selectOption => {
-    selectOption.addEventListener('click', () => {
-        selectOptions.forEach(selectOption => {
-            selectOption.classList.remove('active');
-        });
-        selectOption.classList.add('active');
-    })
+let injectionFunc = () => {
+    if (screen.width >= 500) {
+        document.querySelector('.personal-page').insertAdjacentHTML('afterbegin', injection("div", "div"));
+    } else {
+        document.querySelector('.personal-page').insertAdjacentHTML('afterbegin', injection("select", "option"));
+    };
+    
+    const selectOptions = document.querySelectorAll('.personal-page__navigation>div');
+    selectOptions.forEach(selectOption => {
+        selectOption.addEventListener('click', () => {
+            selectOptions.forEach(selectOption => {
+                selectOption.classList.remove('active');
+            });
+            selectOption.classList.add('active');
+        })
+    });
+}
+injectionFunc();
+window.addEventListener('resize', () => {
+    if(document.querySelector('.personal-page__navigation')) {
+        document.querySelector('.personal-page__navigation').remove();
+    }
+    injectionFunc();
 });
+
