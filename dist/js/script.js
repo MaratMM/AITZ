@@ -1,4 +1,4 @@
-//добавление других js  к общему файлу
+//добавление других js  к общему файлу/////////////////
 
 //необходимая часть , не удалять!!!!!!!!!!
 function testWebP(callback) {
@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', function () {
 });;
     }
 
-    ///////////////////правильное офрмление выпадающего списка////////////////////
+    ///////////////////правильное офрмление выпадающего списка в инпутах ЛК + изменение булетов////////////////////
     if (this.document.querySelector('.personal-page')) {
         let injection = (arg1, arg2) => {
     return (`<${arg1} class="personal-page__navigation">
@@ -61,10 +61,10 @@ window.addEventListener('DOMContentLoaded', function () {
 </${arg1}>`);
 }
 let injectionFunc = () => {
-    if (screen.width >= 500) {
+    if (screen.width > 500) {
         document.querySelector('.personal-page').insertAdjacentHTML('afterbegin', injection("div", "div"));
     } else {
-        document.querySelector('.personal-page').insertAdjacentHTML('afterbegin', injection("select", "option"));
+        document.querySelector('.personal-page__inputs').insertAdjacentHTML('beforebegin', injection("select", "option"));
     };
     
     const selectOptions = document.querySelectorAll('.personal-page__navigation>div');
@@ -86,6 +86,32 @@ window.addEventListener('resize', () => {
 });
 
 ;
+    }
+
+    if (this.document.querySelector('.bullets-for-news')) {
+        let bulletBack = this.document.querySelector('.bullets-for-news__back');
+        let bulletNext = this.document.querySelector('.bullets-for-news__next');
+        let bulletsOfInput = this.document.querySelectorAll('.bullets-for-news__numbers>div');
+        bulletNext.addEventListener('click', () => {
+            bulletsOfInput.forEach(bulletOfInput => {
+                bulletOfInput.textContent = Number(bulletOfInput.textContent) + 1;
+            })
+        })
+        bulletBack.addEventListener('click', () => {
+            if (Number(bulletsOfInput[0].textContent) > 1) {
+                bulletsOfInput.forEach(bulletOfInput => {
+                    bulletOfInput.textContent = Number(bulletOfInput.textContent) - 1;
+                })
+            };
+        })
+        bulletsOfInput.forEach(bulletOfInput => {
+            bulletOfInput.addEventListener('click', () => {
+                bulletsOfInput.forEach(bulletOfInput => {
+                    bulletOfInput.classList.remove('active');
+                })
+                bulletOfInput.classList.add('active');
+            })
+        });
     }
 
     //////////////функция вывода размеров   console.log(salePrice[i].getBoundingClientRect().width);

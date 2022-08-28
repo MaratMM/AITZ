@@ -1,4 +1,4 @@
-//добавление других js  к общему файлу
+//добавление других js  к общему файлу/////////////////
 
 //необходимая часть , не удалять!!!!!!!!!!
 function testWebP(callback) {
@@ -24,9 +24,35 @@ window.addEventListener('DOMContentLoaded', function () {
         @@include('swiper-association-slider.js');
     }
 
-    ///////////////////правильное офрмление выпадающего списка////////////////////
+    ///////////////////правильное офрмление выпадающего списка в инпутах ЛК + изменение булетов////////////////////
     if (this.document.querySelector('.personal-page')) {
         @@include('select-navigation.js');
+    }
+
+    if (this.document.querySelector('.bullets-for-news')) {
+        let bulletBack = this.document.querySelector('.bullets-for-news__back');
+        let bulletNext = this.document.querySelector('.bullets-for-news__next');
+        let bulletsOfInput = this.document.querySelectorAll('.bullets-for-news__numbers>div');
+        bulletNext.addEventListener('click', () => {
+            bulletsOfInput.forEach(bulletOfInput => {
+                bulletOfInput.textContent = Number(bulletOfInput.textContent) + 1;
+            })
+        })
+        bulletBack.addEventListener('click', () => {
+            if (Number(bulletsOfInput[0].textContent) > 1) {
+                bulletsOfInput.forEach(bulletOfInput => {
+                    bulletOfInput.textContent = Number(bulletOfInput.textContent) - 1;
+                })
+            };
+        })
+        bulletsOfInput.forEach(bulletOfInput => {
+            bulletOfInput.addEventListener('click', () => {
+                bulletsOfInput.forEach(bulletOfInput => {
+                    bulletOfInput.classList.remove('active');
+                })
+                bulletOfInput.classList.add('active');
+            })
+        });
     }
 
     //////////////функция вывода размеров   console.log(salePrice[i].getBoundingClientRect().width);
