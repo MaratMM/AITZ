@@ -287,11 +287,15 @@ body.active {
         }
 
         &__item {
+            box-sizing: border-box;
             color: #F9F9F9;
             position: relative;
             display: inline-block;
-            margin: 5px 5px;
+            padding: 5px 4px;
             text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 28px;
 
             &::after {
                 content: '';
