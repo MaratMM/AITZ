@@ -22,6 +22,7 @@ body {
   font-family: "Rubik", Helvetica, sans-serif;
   font-style: normal;
   margin: 0;
+  padding: 0;
   background: #FFFFFF;
 }
 
@@ -1444,6 +1445,15 @@ div.personal-page__navigation > div:nth-child(2) {
 
 .personalpage2__table {
   width: 100%;
+  border-spacing: 7px 11px;
+}
+
+.personalpage2__table tr:hover td {
+  border: 1px solid #4285F7;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .personalpage2__table th {
@@ -1460,6 +1470,8 @@ div.personal-page__navigation > div:nth-child(2) {
 }
 
 .personalpage2__table td {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 128px;
   height: 40px;
   background: #FFFFFF;
@@ -1467,14 +1479,34 @@ div.personal-page__navigation > div:nth-child(2) {
   border-radius: 4px;
 }
 
+.personalpage2__table td a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.01em;
+  color: #454655;
+}
+
+.personalpage2__table td:not(:first-child) {
+  text-align: center;
+}
+
 .personalpage2__table td:first-child {
+  padding: 5px 10px;
   width: 394px;
 }
 
 .personalpage2__table input[type=date] {
+  width: 17px;
+  border: none;
   background-image: url(./../img/date-icon.svg);
   background-repeat: no-repeat;
   background-position: 100% 50%;
+}
+
+.personalpage2__table input[type=date]:focus {
+  outline: none;
 }
 
 .personalpage2__table input[type=date]::-webkit-calendar-picker-indicator {
@@ -1774,7 +1806,9 @@ div.personal-page__navigation > div:nth-child(2) {
 
 @media (max-width: 425px) {
   .button-enter-PP {
-    display: none;
+    width: 70vw;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 
   .breadcrumbs {

@@ -1,6 +1,7 @@
 .button-enter-PP {
   @media (max-width: $mobile-media-size) {
-    display: none;
+    width: 70vw;
+    align-self: center;
   }
 
   align-self: flex-end;
