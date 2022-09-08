@@ -156,7 +156,7 @@ window.addEventListener('resize', () => {
         this.document.querySelector('.popravka-input').classList.toggle('active');
     })
 
-    ////////////////////////////////////////////////////////
+    /////////////////////////кнопка авторизации///////////////////////////////
     document.querySelector('.header-main__icon_authorization')?.addEventListener('click', () => {
         document.querySelector('.popup-authorization-wrapper').classList.add('visually');
         document.querySelector('.popup-authorization').classList.add('visually');
