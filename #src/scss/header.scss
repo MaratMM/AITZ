@@ -2,7 +2,7 @@ body.active {
     overflow: hidden;
 }
 .header {
-    @media (max-width: 375px) {
+    @media (max-width: 425px) {
         position: fixed;
     }
     position: absolute;
@@ -13,7 +13,7 @@ body.active {
     z-index: 10;
 
     &-main {
-        @media (max-width: 375px) {
+        @media (max-width: 425px) {
             background: #ECF3FF;
             flex-wrap: wrap;
         }
@@ -35,7 +35,7 @@ body.active {
                 cursor: pointer;
                 color: #ECF3FF;
 
-                @media (max-width: 375px) {
+                @media (max-width: 425px) {
                     color: rgb(207, 208, 209);
                 }
 
@@ -115,7 +115,7 @@ body.active {
             justify-content: center;
             height: 25px;
 
-            @media (max-width: 375px) {
+            @media (max-width: 425px) {
                 display: flex;
                 z-index: 11;
             }
@@ -192,7 +192,7 @@ body.active {
         }
 
         &__second-block {
-            @media (max-width: 375px) {
+            @media (max-width: 425px) {
                 flex-wrap: nowrap;
                 margin-left: auto;
             }
@@ -222,10 +222,11 @@ body.active {
     }
 
     &-navigation {
-        @media (max-width: 375px) {
+        @media (max-width: 425px) {
             position: absolute;
             top: -100vh;
             height: 100vh;
+            width: 100%;
             transition: all 0.5s ease 0s;
 
             &.active {
@@ -264,7 +265,7 @@ body.active {
                 position: absolute;
                 padding-top: 30px;
 
-                @media (max-width: 375px) {
+                @media (max-width: 425px) {
                     padding-top: 10px;
                 }
 
@@ -282,7 +283,7 @@ body.active {
                 }
             }
 
-            @media (max-width: 375px) {
+            @media (max-width: 425px) {
                 display: flex;
                 flex-direction: column;
                 // margin-top: 200px;

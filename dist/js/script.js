@@ -132,7 +132,7 @@ window.addEventListener('resize', () => {
     })
 
     //////кнопка меню бургера//////////////
-    document.querySelector('.open-close-menu-button__item')?.addEventListener("click", () => {
+    document.querySelector('.open-close-menu-button')?.addEventListener("click", () => {
         document.querySelector('.open-close-menu-button__item').classList.toggle('active');
         document.querySelector('.header-navigation').classList.toggle('active');
         document.querySelector('body').classList.toggle('active');
