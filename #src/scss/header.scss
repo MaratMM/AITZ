@@ -1,10 +1,13 @@
 body.active {
     overflow: hidden;
 }
-
 .header {
-    position: fixed;
-    top: 0px;
+    @media (max-width: 375px) {
+        position: fixed;
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: #ffffff;
     z-index: 10;

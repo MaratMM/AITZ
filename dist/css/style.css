@@ -16,6 +16,7 @@
 
 html,
 body {
+  position: relative;
   overflow-x: hidden;
   height: 100%;
   font-family: "Rubik", Helvetica, sans-serif;
@@ -53,8 +54,9 @@ body.active {
 }
 
 .header {
-  position: fixed;
-  top: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: #ffffff;
   z-index: 10;
@@ -1416,6 +1418,69 @@ div.personal-page__navigation > div:nth-child(2) {
   display: flex;
 }
 
+.personal-page__inputs_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.personal-page__inputs_2 input[type=date] {
+  margin-left: 5px;
+  width: 128px;
+  height: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.personal-page__inputs_2 h2 {
+  margin: 0 auto 0 0;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  color: #25529F;
+}
+
+.personalpage2__table {
+  width: 100%;
+}
+
+.personalpage2__table th {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: -0.01em;
+  color: #25529F;
+  border-bottom: 1px solid #25529f;
+}
+
+.personalpage2__table th:first-child {
+  text-align: start;
+}
+
+.personalpage2__table td {
+  width: 128px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #C2CEE2;
+  border-radius: 4px;
+}
+
+.personalpage2__table td:first-child {
+  width: 394px;
+}
+
+.personalpage2__table input[type=date] {
+  background-image: url(./../img/date-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+
+.personalpage2__table input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
 .message-info {
   background-color: rgba(255, 107, 0, 0.15);
   color: #d45c05;
@@ -1435,6 +1500,7 @@ div.personal-page__navigation > div:nth-child(2) {
 }
 
 .message-info .button-close-message-info {
+  padding: 20px;
   margin-left: 10px;
   width: 15px;
   height: 15px;
@@ -1451,7 +1517,7 @@ div.personal-page__navigation > div:nth-child(2) {
 }
 
 .message-info p {
-  padding: 10px 0;
+  padding: 10px 10px;
   margin: 0;
 }
 
@@ -1515,7 +1581,7 @@ div.personal-page__navigation > div:nth-child(2) {
           transform: rotate(45deg);
 }
 
-@media (min-width: 560px) {
+@media (min-width: 700px) {
   .personal-page h1 {
     display: none;
   }
@@ -1575,6 +1641,26 @@ div.personal-page__navigation > div:nth-child(2) {
   }
 }
 
+@media (max-width: 700px) {
+  .personal-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #ffffff;
+  }
+
+  .personal-page__inputs_2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media (max-width: 637px) {
   .footer-politic a {
     display: none;
@@ -1603,19 +1689,6 @@ div.personal-page__navigation > div:nth-child(2) {
     background-color: white;
     left: 25%;
     bottom: -30px;
-  }
-}
-
-@media (max-width: 560px) {
-  .personal-page {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-color: #ffffff;
   }
 }
 
@@ -1732,6 +1805,10 @@ div.personal-page__navigation > div:nth-child(2) {
 }
 
 @media (max-width: 375px) {
+  .header {
+    position: fixed;
+  }
+
   .header-main {
     background: #ECF3FF;
     -ms-flex-wrap: wrap;

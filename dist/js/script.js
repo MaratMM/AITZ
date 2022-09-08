@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', function () {
 </${arg1}>`);
 }
 let injectionFunc = () => {
-    if (screen.width > 560) {
+    if (screen.width > 700) {
         document.querySelector('.personal-page').insertAdjacentHTML('afterbegin', injection("div", "div"));
     } else {
         document.querySelector('.personal-page__inputs').insertAdjacentHTML('beforebegin', injection("select", "option"));

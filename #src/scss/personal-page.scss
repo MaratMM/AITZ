@@ -2,6 +2,7 @@
   @media (max-width: $mobile-media-size) {
     display: none;
   }
+
   align-self: flex-end;
   width: 118px;
   height: 40px;
@@ -14,6 +15,7 @@
   color: #F9F9F9;
   border: none;
   transition: all 0.3s ease 0s;
+
   &:hover {
     background-color: #36c224;
     transition: all 0.3s ease 0s;
@@ -25,7 +27,7 @@
   display: grid;
 
   h1 {
-    @media (min-width: 560px) {
+    @media (min-width: 700px) {
       display: none;
     }
 
@@ -36,7 +38,7 @@
     color: #25529F;
   }
 
-  @media (max-width: 560px) {
+  @media (max-width: 700px) {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
