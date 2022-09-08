@@ -1,0 +1,18 @@
+.wwa {
+    display: flex;
+    flex-direction: column;
+    &__green-line {
+        position: relative;
+        align-self: center;
+        width: 100%;
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+        &__text {
+            position: absolute;
+            top: 35%;
+            left: calc((100vw - 900px) / 2);
+        }
+    }
+}

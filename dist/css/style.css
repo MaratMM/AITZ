@@ -1513,6 +1513,35 @@ div.personal-page__navigation > div:nth-child(2) {
   opacity: 0;
 }
 
+.wwa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wwa__green-line {
+  position: relative;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+}
+
+.wwa__green-line img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.wwa__green-line__text {
+  position: absolute;
+  top: 35%;
+  left: calc((100vw - 900px) / 2);
+}
+
 .message-info {
   background-color: rgba(255, 107, 0, 0.15);
   color: #d45c05;
