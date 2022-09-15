@@ -6,10 +6,16 @@
 
 .association-block__img {
     img {
+        height: 100%;
         width: 100%;
+        min-height: 350px;
+
+        @media (max-width: 1312px) {
+            object-fit: cover;
+        }
     }
 
-    height: 100%;
+    width: 100%;
 }
 
 .association-block__text {
@@ -223,6 +229,12 @@
     }
 }
 
+.actual-projects__block-wrapper {}
+
+.actual-projects__help-wrapper {
+    height: max-content;
+}
+
 .actual-projects {
     margin-bottom: 20px;
 }
@@ -234,16 +246,24 @@
     @media (max-width: 550px) {
         flex-direction: column;
         align-items: center;
+        margin-right: 0px;
     }
 
 
-    img {
-        width: max-content;
+    .img-woman-helper {
         margin-right: 20px;
-
+        img {
+            width: 210px;
+        }
         @media (max-width: 550px) {
-            width: 90vw;
             margin-right: 0px;
+            img {
+                height: 210px;
+                width: 90vw;
+                object-fit: cover;
+                object-position: 0 20%;
+
+            }
         }
     }
 }
@@ -315,6 +335,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+
     @media (max-width: 400px) {
         max-width: 90vw;
     }
@@ -324,7 +345,7 @@
     margin: 5px 10px 15px 10px;
     justify-content: flex-start;
     align-items: center;
-    width: 230px;
+    width: 200px;
     height: 398px;
     background: #f9f9f9;
     border: 1px solid #ecf3ff;
@@ -354,9 +375,11 @@
     background: #d30a44;
     border-radius: 4px 4px 0px 0px;
     width: 119px;
+
     @media (max-width: 520px) {
         width: 97%;
     }
+
     height: 0px;
     bottom: 0px;
     transition: all 0.3s ease 0s;
@@ -372,6 +395,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     @media (max-width: 520px) {
         align-items: flex-start;
         margin-left: 20px;
@@ -387,6 +411,7 @@
     text-align: center;
     letter-spacing: -0.01em;
     color: #25529f;
+
     @media (max-width: 520px) {
         text-align: start;
     }
@@ -398,6 +423,7 @@
     line-height: 19px;
     text-align: center;
     color: #454655;
+
     @media (max-width: 520px) {
         text-align: start;
     }
