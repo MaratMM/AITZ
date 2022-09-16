@@ -1,0 +1,195 @@
+.our-work__red-line {
+    background-image: url('./../img/red-line.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 394px;
+
+    @media (max-width: 425px) {
+        height: max-content;
+    }
+
+    .wwa-helper-wrapper {
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__text {
+        padding: 20px 10px;
+
+        h2 {
+            width: 400px;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 47px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.01em;
+            color: #ECF3FF;
+            margin: 0;
+
+            @media (max-width: 425px) {
+                font-size: 36px;
+                width: 100%;
+            }
+        }
+
+        p {
+            margin: 0;
+            width: 400px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: -0.01em;
+            color: #ECF3FF;
+
+            @media (max-width: 425px) {
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.our-work {
+    &__direction {
+        h2 {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 25px;
+            text-align: center;
+            color: #25529F;
+        }
+
+        &-block {
+            display: flex;
+            justify-content: center;
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+            &__text-0 {font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;
+                text-align: center;
+                color: #25529F;}
+            &__text-1 {font-weight: 500;
+                font-size: 12px;
+                line-height: 140%;              
+                text-align: center;
+                color: #25529F;}
+            &__text-2 {font-weight: 400;
+                font-size: 12px;
+                line-height: 140%;
+                text-align: center;  
+                color: #25529F;}
+            a {
+                box-sizing: border-box;
+                padding: 10px;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                text-decoration: none;
+                width: 230px;
+                min-height: 420px;
+                background: #ECF3FF;
+                border-radius: 16px;
+
+                @media (max-width: 768px) {
+                    flex-direction: initial;
+                    width: 95%;
+                    min-height: 200px;
+                }
+
+                img {
+                    width: 125px;
+                    height: 125px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    &__defenition {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 43px;
+            letter-spacing: -0.01em;
+            color: #25529F;
+        }
+
+        &-block {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+
+            &__people {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 25px;
+                color: #25529F;
+                max-width: 582px;
+                margin-right: 30px;
+
+            }
+
+            &__documents {
+                max-width: 327px;
+                background: #ECF3FF;
+                border-radius: 4px;
+                padding: 25px;
+
+                @media (max-width: 768px) {
+                    margin-top: 20px;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 25px;
+                    color: #25529F;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0 0 0 20px;
+
+                    li {
+                        padding: 5px 0;
+                    }
+
+                    li>a {
+                        text-decoration: none;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #D30A44;
+                        position: relative;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 20px;
+                            height: 20px;
+                            background-image: url('./../img/Download.png');
+                            left: -25px;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

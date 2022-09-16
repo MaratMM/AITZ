@@ -27,7 +27,7 @@ body {
 }
 
 main {
-  padding: 15px 0;
+  padding: 0px 0;
 }
 
 .wrapper {
@@ -1719,6 +1719,212 @@ div.personal-page__navigation > div:nth-child(2) {
   width: 100%;
 }
 
+.our-work__red-line {
+  background-image: url("./../img/red-line.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 394px;
+}
+
+.our-work__red-line .wwa-helper-wrapper {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.our-work__red-line__text {
+  padding: 20px 10px;
+}
+
+.our-work__red-line__text h2 {
+  width: 400px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.01em;
+  color: #ECF3FF;
+  margin: 0;
+}
+
+.our-work__red-line__text p {
+  margin: 0;
+  width: 400px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  color: #ECF3FF;
+}
+
+.our-work__direction h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 25px;
+  text-align: center;
+  color: #25529F;
+}
+
+.our-work__direction-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.our-work__direction-block__text-0 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #25529F;
+}
+
+.our-work__direction-block__text-1 {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  text-align: center;
+  color: #25529F;
+}
+
+.our-work__direction-block__text-2 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-align: center;
+  color: #25529F;
+}
+
+.our-work__direction-block a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  width: 230px;
+  min-height: 420px;
+  background: #ECF3FF;
+  border-radius: 16px;
+}
+
+.our-work__direction-block a img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+}
+
+.our-work__defenition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.our-work__defenition h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  letter-spacing: -0.01em;
+  color: #25529F;
+}
+
+.our-work__defenition-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.our-work__defenition-block__people {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #25529F;
+  max-width: 582px;
+  margin-right: 30px;
+}
+
+.our-work__defenition-block__documents {
+  max-width: 327px;
+  background: #ECF3FF;
+  border-radius: 4px;
+  padding: 25px;
+}
+
+.our-work__defenition-block__documents h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 25px;
+  color: #25529F;
+}
+
+.our-work__defenition-block__documents ul {
+  list-style: none;
+  padding: 0 0 0 20px;
+}
+
+.our-work__defenition-block__documents ul li {
+  padding: 5px 0;
+}
+
+.our-work__defenition-block__documents ul li > a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #D30A44;
+  position: relative;
+}
+
+.our-work__defenition-block__documents ul li > a::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("./../img/Download.png");
+  left: -25px;
+  background-size: contain;
+}
+
 .message-info {
   background-color: rgba(255, 107, 0, 0.15);
   color: #d45c05;
@@ -1893,6 +2099,35 @@ div.personal-page__navigation > div:nth-child(2) {
     font-size: 5vw;
     display: inline-block;
     width: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-work__direction-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .our-work__direction-block a {
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+    width: 95%;
+    min-height: 200px;
+  }
+
+  .our-work__defenition-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .our-work__defenition-block__documents {
+    margin-top: 20px;
   }
 }
 
@@ -2160,6 +2395,22 @@ div.personal-page__navigation > div:nth-child(2) {
             flex-direction: column;
   }
 
+  .our-work__red-line {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+
+  .our-work__red-line__text h2 {
+    font-size: 36px;
+    width: 100%;
+  }
+
+  .our-work__red-line__text p {
+    font-size: 14px;
+    width: 100%;
+  }
+
   .breadcrumbs {
     display: none;
   }
@@ -2225,6 +2476,10 @@ div.personal-page__navigation > div:nth-child(2) {
 .webp .personal-page__news__download-file { background-image: url(./../img/Download.webp); }
 
 .webp .wwa__green-line { background-image: url(./../img/whowearePic.webp); }
+
+.webp .our-work__red-line { background-image: url(./../img/red-line.webp); }
+
+.webp .our-work__defenition-block__documents ul li > a::before { background-image: url(./../img/Download.webp); }
 
 @media (min-width: 426px) {
 
