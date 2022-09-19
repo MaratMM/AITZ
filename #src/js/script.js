@@ -1,5 +1,6 @@
 //добавление других js  к общему файлу/////////////////
 
+
 //необходимая часть , не удалять!!!!!!!!!!
 function testWebP(callback) {
     var webP = new Image();
@@ -94,10 +95,30 @@ window.addEventListener('DOMContentLoaded', function () {
     this.document.querySelector('.header-main__icon_search')?.addEventListener('click', () => {
         this.document.querySelector('.header-main__icon_search').classList.toggle('active');
         this.document.querySelector('.header-main__input-search').classList.toggle('active');
-        this.document.querySelector('.popravka-input').classList.toggle('active');
+        this.document.querySelector('.popravka-input-search-special1').classList.toggle('active');
     })
 
+    let orderBySerch = ()=> {
+        if (this.document.querySelector('.popravka-input-search-special1') && this.window.screen.width<=425) {
+            this.document.querySelector('.header-main__input-search').classList.add('active');
+            this.document.querySelector('.header-main').append(this.document.querySelector('.popravka-input-search-special1'));
+        } else {
+            this.document.querySelector('.header-main__input-search').classList.remove('active');
+            this.document.querySelector('.header-main__icon_authorization').before(this.document.querySelector('.popravka-input-search-special1'));
+        }
+    }
+    orderBySerch();
+    window.addEventListener("resize", orderBySerch);
+    
+
     /////////////////////////кнопка авторизации///////////////////////////////
+    document.querySelector('.popup-authorization__password-show')?.addEventListener('click', ()=> {
+        if (document.getElementById('password-input-authorization').getAttribute('type') == 'password') {
+            document.getElementById('password-input-authorization').setAttribute('type', 'text');
+        } else {
+            document.getElementById('password-input-authorization').setAttribute('type', 'password');
+        }
+    })
     document.querySelector('.header-main__icon_authorization')?.addEventListener('click', () => {
         document.querySelector('.popup-authorization-wrapper').classList.add('visually');
         document.querySelector('.popup-authorization').classList.add('visually');

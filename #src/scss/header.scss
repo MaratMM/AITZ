@@ -1,10 +1,12 @@
 body.active {
     overflow: hidden;
 }
+
 .header {
     @media (max-width: 425px) {
         position: fixed;
     }
+
     position: absolute;
     top: 0;
     left: 0;
@@ -44,11 +46,6 @@ body.active {
 
                 &.active {
                     color: #25529F;
-
-                    &:hover {
-                        color: rgb(5, 230, 5);
-                        transition: all 0.3s ease 0s;
-                    }
                 }
             }
 
@@ -56,6 +53,7 @@ body.active {
 
 
         &__input-search {
+            padding-left: 10px;
             height: 26px;
             width: 100%;
             opacity: 0.0001;
@@ -64,6 +62,7 @@ body.active {
             transition: all 1s ease 0s;
 
             &.active {
+                margin: 10px 0;
                 height: 26px;
                 opacity: 1;
                 border-radius: 31px;
@@ -79,7 +78,7 @@ body.active {
 
         &__icon {
             cursor: pointer;
-            width: 26px;
+            min-width: 26px;
             height: 26px;
             margin: 5px;
             background-repeat: no-repeat;
@@ -89,6 +88,9 @@ body.active {
                 transition: all 1s ease 0s;
                 position: absolute;
                 right: -4px;
+                @media (max-width: 425px) {
+                    display: none;
+                }
 
                 &.active {
                     width: 12px;
@@ -184,6 +186,8 @@ body.active {
         align-items: center;
 
         &__logo {
+            margin-right: 20px;
+
             img {
                 @media (max-width: 475px) {
                     max-width: 35vw;
@@ -197,27 +201,17 @@ body.active {
                 margin-left: auto;
             }
 
-            @media (max-width: 344px) {
+            @media (max-width: 302px) {
                 order: 3;
+                //flex-wrap: wrap;
             }
 
+            max-height: 45px;
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             margin-left: 40px;
 
-            .popravka-input {
-                width: 30px;
-                transition: all 1s ease 0s;
-                position: relative;
-                display: flex;
-                align-items: center;
-
-                &.active {
-                    width: 100px;
-                    transition: all 1s ease 0s;
-                }
-            }
+            
         }
     }
 
@@ -335,4 +329,21 @@ body.active {
     top: 20px;
     transform: scaleY(1);
     transition: all 0.3s ease 0s;
+}
+.popravka-input-search-special1 {
+    width: 30px;
+    transition: all 1s ease 0s;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 425px) {
+        order: 4;
+        width: 100%;
+    }
+
+    &.active {
+        width: 100%;
+        transition: all 1s ease 0s;
+    }
 }
