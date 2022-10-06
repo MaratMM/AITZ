@@ -1357,7 +1357,7 @@ div.personal-page__navigation > div:nth-child(2) {
 }
 
 .bullets-for-news__numbers div.active {
-  background-color: #ffffff;
+  background-color: #cfd1ee;
   border-radius: 50%;
 }
 
@@ -2184,6 +2184,81 @@ div.personal-page__navigation > div:nth-child(2) {
   color: #9899AF;
 }
 
+.participants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.participants__h1 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.01em;
+  color: #25529f;
+}
+
+.participants__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 10px;
+  margin: 15px 10px;
+}
+
+.participants__items {
+  margin-bottom: 10px;
+}
+
+.participants__item:not(:last-child) {
+  border-bottom: 1px solid rgba(37, 82, 159, 0.253);
+}
+
+.participants__item__img {
+  min-width: 325px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.participants__item__about-who {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #454655;
+}
+
+.participants__item__about-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #454655;
+}
+
 .message-info {
   background-color: rgba(255, 107, 0, 0.15);
   color: #d45c05;
@@ -2391,6 +2466,16 @@ div.personal-page__navigation > div:nth-child(2) {
 
   .our-work__defenition-block__documents {
     margin-top: 20px;
+  }
+
+  .participants__item__about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

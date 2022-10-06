@@ -20,6 +20,19 @@ testWebP(function (support) {
 //основной скрипт
 
 window.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener("resize", participantsImgInjection => {
+        if (window.screen.width <= 768) {
+            for (let k = 0; k < document.querySelectorAll('.participants__item').length; k++) {
+                document.querySelectorAll('.participants__item__about-who')[k].append(document.querySelectorAll('.participants__item__img')[k]);
+            }
+        } else {
+            for (let k = 0; k < document.querySelectorAll('.participants__item').length; k++) {
+                document.querySelectorAll('.participants__item__about')[k].before(document.querySelectorAll('.participants__item__img')[k]);
+            }
+        }
+    });
+    
+
     /////////////подключение слайдера//////////////////////////
     if (this.document.querySelector('.swiper-association-slider')) {
         const swiper = new Swiper('.swiper-association-slider', {
@@ -157,8 +170,8 @@ window.addEventListener('resize', () => {
         this.document.querySelector('.popravka-input-search-special1').classList.toggle('active');
     })
 
-    let orderBySerch = ()=> {
-        if (this.document.querySelector('.popravka-input-search-special1') && this.window.screen.width<=425) {
+    let orderBySerch = () => {
+        if (this.document.querySelector('.popravka-input-search-special1') && this.window.screen.width <= 425) {
             this.document.querySelector('.header-main__input-search').classList.add('active');
             this.document.querySelector('.header-main').append(this.document.querySelector('.popravka-input-search-special1'));
         } else {
@@ -168,10 +181,10 @@ window.addEventListener('resize', () => {
     }
     orderBySerch();
     window.addEventListener("resize", orderBySerch);
-    
+
 
     /////////////////////////кнопка авторизации///////////////////////////////
-    document.querySelector('.popup-authorization__password-show')?.addEventListener('click', ()=> {
+    document.querySelector('.popup-authorization__password-show')?.addEventListener('click', () => {
         if (document.getElementById('password-input-authorization').getAttribute('type') == 'password') {
             document.getElementById('password-input-authorization').setAttribute('type', 'text');
         } else {
