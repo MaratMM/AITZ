@@ -2,6 +2,77 @@ body.active {
     overflow: hidden;
 }
 
+form.block-for-search {
+    position: relative;
+    margin: 5px;
+    order: 2;
+
+    transition: all 0.3s ease 0s;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        order: 3;
+    }
+
+    &.active {
+
+        transition: all 0.3s ease 0s;
+    }
+    input[type="search"]::-webkit-search-cancel-button { /* псевдо что-то, что отвечает за кнопку очистки */
+        -webkit-appearance: none; /* без сброса оформление не применится */
+        width: 17px; /* размеры кастомного крестика */
+        height: 17px;
+        background: red; /* новый вид крестика */
+        margin-right: 30px; /* его даже можно позиционировать */
+        cursor: pointer; /* вот это не работает */
+    }
+
+    input.important-header-serch {
+        height: 26px;
+        padding-left: 15px;
+        border-radius: 15px;
+        width: 26px;
+        border: 1px solid rgb(35, 35, 209);
+        transition: all 0.3s ease 0s;
+
+        @media (max-width: 768px) {
+            width: 100%;
+
+            &.active {
+                width: 100%;
+                transition: all 0.3s ease 0s;
+            }
+        }
+
+        &.active {
+            width: 169px;
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+    button.button-for-search {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-image: url('./../img/Search.png');
+        background-color: transparent;
+        background-position: center;
+        border: none;
+        position: absolute;
+        right: 0;
+        transition: all 0.3s ease 0s;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        &.active {
+            transition: all 0.3s ease 0s;
+        }
+    }
+}
+
+
 .header {
     @media (max-width: 425px) {
         position: fixed;
@@ -15,12 +86,16 @@ body.active {
     z-index: 10;
 
     &-main {
-        @media (max-width: 425px) {
+        min-height: 80px;
+
+        @media (max-width: 768px) {
             background: #ECF3FF;
             flex-wrap: wrap;
+            min-height: 130px;
         }
 
         &__language {
+            order: 1;
             font-weight: 700;
             display: flex;
             font-size: 24px;
@@ -37,7 +112,7 @@ body.active {
                 cursor: pointer;
                 color: #ECF3FF;
 
-                @media (max-width: 425px) {
+                @media (max-width: 768px) {
                     color: rgb(207, 208, 209);
                 }
 
@@ -85,6 +160,7 @@ body.active {
                 transition: all 1s ease 0s;
                 position: absolute;
                 right: -4px;
+
                 @media (max-width: 425px) {
                     display: none;
                 }
@@ -100,6 +176,12 @@ body.active {
             }
 
             &_authorization {
+                order: 3;
+
+                @media (max-width: 768px) {
+                    order: 2;
+                }
+
                 background-image: url('./../img/LK.png');
                 // z-index: 2;
             }
@@ -117,6 +199,7 @@ body.active {
             @media (max-width: 425px) {
                 display: flex;
                 z-index: 11;
+                order: 3;
             }
 
             &__item {
@@ -179,11 +262,19 @@ body.active {
 
         position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
 
         &__logo {
             margin-right: 20px;
+            order: 0;
+            position: absolute;
+            left: 0;
+
+            @media (max-width: 768px) {
+                top: 5px;
+                left: 5px;
+            }
 
             img {
                 @media (max-width: 475px) {
@@ -208,7 +299,7 @@ body.active {
             align-items: center;
             margin-left: 40px;
 
-            
+
         }
     }
 
@@ -326,24 +417,4 @@ body.active {
     top: 20px;
     transform: scaleY(1);
     transition: all 0.3s ease 0s;
-}
-.popravka-input-search-special1 {
-    width: 30px;
-    transition: all 1s ease 0s;
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    @media (max-width: 425px) {
-        order: 4;
-        width: 100%;
-    }
-
-    &.active {
-        width: 200px;
-        transition: all 1s ease 0s;
-        @media (max-width: 425px) {
-            width: 100%;
-        }
-    }
 }

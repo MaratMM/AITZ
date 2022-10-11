@@ -20,7 +20,8 @@ testWebP(function (support) {
 //основной скрипт
 
 window.addEventListener('DOMContentLoaded', function () {
-    window.addEventListener("resize", participantsImgInjection => {
+
+    let participantsImgInjection = () => {
         if (window.screen.width <= 768) {
             for (let k = 0; k < document.querySelectorAll('.participants__item').length; k++) {
                 document.querySelectorAll('.participants__item__about-who')[k].append(document.querySelectorAll('.participants__item__img')[k]);
@@ -30,8 +31,10 @@ window.addEventListener('DOMContentLoaded', function () {
                 document.querySelectorAll('.participants__item__about')[k].before(document.querySelectorAll('.participants__item__img')[k]);
             }
         }
-    });
-    
+    }
+    participantsImgInjection();
+    window.addEventListener("resize", participantsImgInjection)
+
 
     /////////////подключение слайдера//////////////////////////
     if (this.document.querySelector('.swiper-association-slider')) {
@@ -163,26 +166,13 @@ window.addEventListener('resize', () => {
         })
     }
 
-    ////////////////для красивого появления поиска////////////////////
-    this.document.querySelector('.header-main__icon_search')?.addEventListener('click', () => {
-        this.document.querySelector('.header-main__icon_search').classList.toggle('active');
-        this.document.querySelector('.header-main__input-search').classList.toggle('active');
-        this.document.querySelector('.popravka-input-search-special1').classList.toggle('active');
+    ////////////////для красивого появления поиска  поставь////////////////////
+    
+    this.document.querySelector('button.button-for-search').addEventListener('click', () => {
+        this.document.querySelector('.important-header-serch').classList.toggle('active');
     })
-
-    let orderBySerch = () => {
-        if (this.document.querySelector('.popravka-input-search-special1') && this.window.screen.width <= 425) {
-            this.document.querySelector('.header-main__input-search').classList.add('active');
-            this.document.querySelector('.header-main').append(this.document.querySelector('.popravka-input-search-special1'));
-        } else {
-            this.document.querySelector('.header-main__input-search').classList.remove('active');
-            this.document.querySelector('.header-main__icon_authorization').before(this.document.querySelector('.popravka-input-search-special1'));
-        }
-    }
-    orderBySerch();
-    window.addEventListener("resize", orderBySerch);
-
-
+    
+    
     /////////////////////////кнопка авторизации///////////////////////////////
     document.querySelector('.popup-authorization__password-show')?.addEventListener('click', () => {
         if (document.getElementById('password-input-authorization').getAttribute('type') == 'password') {

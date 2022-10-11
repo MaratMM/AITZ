@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "Rubik";
   font-display: swap;
@@ -54,6 +56,77 @@ body.active {
   overflow: hidden;
 }
 
+form.block-for-search {
+  position: relative;
+  margin: 5px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+form.block-for-search.active {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+form.block-for-search input[type=search]::-webkit-search-cancel-button {
+  /* псевдо что-то, что отвечает за кнопку очистки */
+  -webkit-appearance: none;
+  /* без сброса оформление не применится */
+  width: 17px;
+  /* размеры кастомного крестика */
+  height: 17px;
+  background: red;
+  /* новый вид крестика */
+  margin-right: 30px;
+  /* его даже можно позиционировать */
+  cursor: pointer;
+  /* вот это не работает */
+}
+
+form.block-for-search input.important-header-serch {
+  height: 26px;
+  padding-left: 15px;
+  border-radius: 15px;
+  width: 26px;
+  border: 1px solid #2323d1;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+form.block-for-search input.important-header-serch.active {
+  width: 169px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+form.block-for-search button.button-for-search {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-image: url("./../img/Search.png");
+  background-color: transparent;
+  background-position: center;
+  border: none;
+  position: absolute;
+  right: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+form.block-for-search button.button-for-search.active {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -64,19 +137,23 @@ body.active {
 }
 
 .header-main {
+  min-height: 80px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .header-main__language {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,6 +237,9 @@ body.active {
 }
 
 .header-main__icon_authorization {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   background-image: url("./../img/LK.png");
 }
 
@@ -250,6 +330,11 @@ body.active {
 
 .header-main__logo {
   margin-right: 20px;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  position: absolute;
+  left: 0;
 }
 
 .header-main__second-block {
@@ -368,27 +453,6 @@ body.active {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-.popravka-input-search-special1 {
-  width: 30px;
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.popravka-input-search-special1.active {
-  width: 200px;
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
 }
 
 .popup-authorization-wrapper {
@@ -2441,6 +2505,50 @@ div.personal-page__navigation > div:nth-child(2) {
 }
 
 @media (max-width: 768px) {
+  form.block-for-search {
+    width: 100%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  form.block-for-search input.important-header-serch {
+    width: 100%;
+  }
+
+  form.block-for-search input.important-header-serch.active {
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  form.block-for-search button.button-for-search {
+    display: none;
+  }
+
+  .header-main {
+    background: #ECF3FF;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-height: 130px;
+  }
+
+  .header-main__language-item {
+    color: #cfd0d1;
+  }
+
+  .header-main__icon_authorization {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .header-main__logo {
+    top: 5px;
+    left: 5px;
+  }
+
   .our-work__direction-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2624,16 +2732,6 @@ div.personal-page__navigation > div:nth-child(2) {
     position: fixed;
   }
 
-  .header-main {
-    background: #ECF3FF;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-
-  .header-main__language-item {
-    color: #cfd0d1;
-  }
-
   .header-main__icon_search {
     display: none;
   }
@@ -2643,6 +2741,9 @@ div.personal-page__navigation > div:nth-child(2) {
     display: -ms-flexbox;
     display: flex;
     z-index: 11;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
 
   .header-main__second-block {
@@ -2683,17 +2784,6 @@ div.personal-page__navigation > div:nth-child(2) {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .popravka-input-search-special1 {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-    width: 100%;
-  }
-
-  .popravka-input-search-special1.active {
-    width: 100%;
   }
 
   .button-enter-PP {
@@ -2838,39 +2928,41 @@ div.personal-page__navigation > div:nth-child(2) {
   }
 }
 
-.webp .header-main__icon_search { background-image: url(./../img/Search.webp); }
+.webp form.block-for-search button.button-for-search{ background-image: url(./../img/Search.webp); }
 
-.webp .header-main__icon_search.active { background-image: url(./../img/Search-loop.webp); }
+.webp .header-main__icon_search{ background-image: url(./../img/Search.webp); }
 
-.webp .header-main__icon_authorization { background-image: url(./../img/LK.webp); }
+.webp .header-main__icon_search.active{ background-image: url(./../img/Search-loop.webp); }
 
-.webp .popup-authorization__form .popup-authorization__email::before { background-image: url(./../img/popup-email.webp); }
+.webp .header-main__icon_authorization{ background-image: url(./../img/LK.webp); }
 
-.webp .close-popup-authorization { background-image: url(./../img/Close-popup.webp); }
+.webp .popup-authorization__form .popup-authorization__email::before{ background-image: url(./../img/popup-email.webp); }
 
-.webp .mail-block { background-image: url(./../img/Rectangle-247.webp); }
+.webp .close-popup-authorization{ background-image: url(./../img/Close-popup.webp); }
 
-.webp .personal-page-picture { background-image: url(./../img/personalpagePic.webp); }
+.webp .mail-block{ background-image: url(./../img/Rectangle-247.webp); }
 
-.webp .personal-page__inputs input[type=search] { background-image: url(./../img/search-icon-grey.webp); }
+.webp .personal-page-picture{ background-image: url(./../img/personalpagePic.webp); }
 
-.webp .personal-page__inputs input[type=date] { background-image: url(./../img/date-icon.webp); }
+.webp .personal-page__inputs input[type=search]{ background-image: url(./../img/search-icon-grey.webp); }
 
-.webp .personal-page__inputs input[type=date]:focus { background-image: url(./../img/date-icon-focus.webp); }
+.webp .personal-page__inputs input[type=date]{ background-image: url(./../img/date-icon.webp); }
 
-.webp .personal-page__news__download-file { background-image: url(./../img/Download.webp); }
+.webp .personal-page__inputs input[type=date]:focus{ background-image: url(./../img/date-icon-focus.webp); }
 
-.webp .wwa__green-line { background-image: url(./../img/whowearePic.webp); }
+.webp .personal-page__news__download-file{ background-image: url(./../img/Download.webp); }
 
-.webp .our-work__red-line { background-image: url(./../img/red-line.webp); }
+.webp .wwa__green-line{ background-image: url(./../img/whowearePic.webp); }
 
-.webp .our-work__defenition-block__documents ul li > a::before { background-image: url(./../img/Download.webp); }
+.webp .our-work__red-line{ background-image: url(./../img/red-line.webp); }
 
-.webp .whatwedo__red-line { background-image: url(./../img/red-hearth.webp); }
+.webp .our-work__defenition-block__documents ul li > a::before{ background-image: url(./../img/Download.webp); }
 
-.webp .news-page__red-line { background-image: url(./../img/news-page.webp); }
+.webp .whatwedo__red-line{ background-image: url(./../img/red-hearth.webp); }
 
-@media (min-width: 426px) {
+.webp .news-page__red-line{ background-image: url(./../img/news-page.webp); }
 
-  .webp .wwa__mission { background-image: url(./../img/happy-family.webp); }
+@media (min-width: 426px){
+
+  .webp .wwa__mission{ background-image: url(./../img/happy-family.webp); }
 }
