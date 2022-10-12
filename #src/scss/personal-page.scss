@@ -176,18 +176,28 @@ div.personal-page__navigation>div:nth-child(2) {
 .personal-page__inputs input[type='date'] {
   position: relative;
 
-  &:focus {
-    background-image: url(./../img/date-icon-focus.png);
-  }
+  // &:focus {
+  //   background-image: url(./../img/date-icon-focus.png);
+  // }
 
-  background-image: url(./../img/date-icon.png);
-  background-repeat: no-repeat;
-  background-position: 95% 50%;
+  // background-image: url(./../img/date-icon.png);
+  // background-repeat: no-repeat;
+  // background-position: 95% 50%;
+  &:focus {
+    &::-webkit-calendar-picker-indicator {
+      background-image: url(./../img/date-icon-focus.png);
+    }
+  }
 
   &::-webkit-calendar-picker-indicator {
     position: absolute;
     right: 5%;
-    opacity: 0;
+    // opacity: 0;
+    background-image: url(./../img/date-icon.png);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: 140%;
+
   }
 
   width: 180px;

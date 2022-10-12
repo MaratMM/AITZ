@@ -30,7 +30,7 @@ body {
 }
 
 main {
-    padding: 0px 0;
+    padding: 10px 0;
 }
 
 .wrapper {
@@ -76,6 +76,8 @@ $mob-tabl-media-size: 760px;
 @import "whatwedo";
 @import "news-page";
 @import "participants";
+@import "error404";
+@import "all-news";
 
 ////////////////////////popup////////////////////////
 

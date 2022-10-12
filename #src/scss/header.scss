@@ -275,6 +275,9 @@ form.block-for-search {
                 top: 5px;
                 left: 5px;
             }
+            @media (max-width: 320px) {
+                position: initial;
+            }
 
             img {
                 @media (max-width: 475px) {
